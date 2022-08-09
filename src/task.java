@@ -1,44 +1,39 @@
 import java.util.*;
-class Second {
+public class mangotree {
      public static void main(String[] args) {
-          Scanner sc = new Scanner(System.in);
-          int a[] = new int[7];
-          for (int i = 0; i < a.length; i++) {
-               a[i] = sc.nextInt();
-          }
-          float tot = 0.0f;
-          int t = 0;
-          for (int i = 0; i < a.length; i++) {
-               t += a[i];
-               tot = tot + a[i] * 100;
-               if (a[i] > 8) {
-                    int temp = a[i] - 8;
-                    tot = tot + (temp * 15);
+          Scanner sc=new Scanner(System.in);
+          int row=sc.nextInt();
+          int col=sc.nextInt();
+          int tree=sc.nextInt();
+          int a[][]=new int[row][col];
+          int k=1;
+          for(int i=0;i<row;i++){
+               for(int j=0;j<col;j++){
+                    a[i][j]=k;
+                    k++;
                }
           }
-          if (t > 40) {
-               int temp1 = 40 - t;
-               tot = tot + temp1 * 25;
-          }
-          float sun_d = 0;
-          if (a[0] > 0) {
-               sun_d = a[0] * 100;
-               if (a[0] > 8) {
-                    int sun1 = a[0] - 8;
-                    sun_d = sun_d + (sun1 * 15);
+          boolean flag=false;
+          for(int i=0;i<col;i++){
+               if(a[0][i]==tree){
+                    flag=true;
                }
-               sun_d = sun_d + (sun_d * 0.50f);
           }
-          float sat_d = 0;
-          if (a[6] > 0) {
-               sat_d = a[6] * 100;
-               if (a[6] > 8) {
-                    int sat1 = a[6] - 8;
-                    sat_d = sat_d + (sat1 * 15);
+          for(int i=0;i<row;i++){
+               if(a[i][0]==tree){
+                    flag=true;
                }
-               sat_d = sat_d + (sat_d * 0.25f);
           }
-          tot = tot + sun_d + sat_d;
-          System.out.print(tot);
+          for(int i=0;i<row;i++){
+               if(a[i][col-1]==tree){
+                    flag=true;
+               }
+          }
+          if(flag==true){
+               System.out.print("Yes");
+          }
+          else{
+               System.out.print("No");
+          }
      }
 }
