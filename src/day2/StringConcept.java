@@ -1,6 +1,6 @@
 package day2;
 
-        import java.util.Scanner;
+import java.util.Scanner;
 
       public class StringConcept {
        public static void main(String[] args) {
@@ -9,7 +9,7 @@ package day2;
         String s2=sc.next();
         System.out.println("length of 2 strings "+s1.length()+","+s2.length());
         System.out.println("concatenation of 2 strings: "+s1.concat(s2));
-        String a[]=s1.split("a",1);
+        String a[]=s1.split("@",1);
         for(String i:a){
             System.out.println(i);
         }
