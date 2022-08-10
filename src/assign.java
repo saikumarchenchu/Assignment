@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-    public class DemoTranslation {
+    public class assign {
         public static void main(String[] args) {
             int x, y, z;
-            String8 lab = new String8(2);
+            String lab = new String(2);
             System.out.println("Enter x");
             x = STDIN_SCANNER.nextInt();
             System.out.println("Enter y");
