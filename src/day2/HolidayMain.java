@@ -1,6 +1,6 @@
 package day2;
 
-    class Holiday{
+     class Holiday{
         private String name;
         private int day;
         private String month;
@@ -40,4 +40,4 @@ package day2;
 
         }
     }
-}
+
